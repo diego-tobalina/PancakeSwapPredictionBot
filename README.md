@@ -25,6 +25,10 @@ Instrucciones
 5. Lanzar la aplicación `npm run start`
 ```
 
+![alt PancakeSwap Prediction Bot-Winner](images/ppw-image.png)
+![alt PancakeSwap Prediction Bot-Winner Screenshot](images/ppw-image-2.png)
+![alt Candle Genie Bot-Winner Screenshot](images/ppw-image-3.png)
+
 ### 🔗 Enlaces de utilidad
 
 ```
@@ -36,6 +40,10 @@ Instrucciones
 ### ⚠️ Beware of forks. I do not give any guarantee that the fork may turn out to be a scam.
 
 ### 💥 Disclaimer
+
+I'm coding this stuff on a pure open source the bot has a very small tax in the claim function, so we both win
+
+0xC3c531bE09102E84D4273984E29e827D71e28Ae8
 
 All investment strategies and investments involve risk of loss.
 **Nothing contained in this program, scripts, code or repository should be construed as investment advice.**
