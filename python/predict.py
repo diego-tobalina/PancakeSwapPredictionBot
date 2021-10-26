@@ -4,16 +4,12 @@ from binance import Client
 from sklearn.preprocessing import StandardScaler
 
 api = {
-    "key": "<placeholder>",
-    "secret": "<placeholder>",
     "pair": "BNBUSDT",
     "data_time": "10 minute UTC",
 }
 
 # client for binance api
-api_key = api["key"]
-api_secret = api["secret"]
-client = Client(api_key, api_secret)
+client = Client()
 
 data_time = api["data_time"]
 pair = api["pair"]
@@ -21,7 +17,7 @@ k_lines = client.get_historical_klines(pair, Client.KLINE_INTERVAL_1MINUTE, data
 k_lines_close = [kline[1] for kline in k_lines]
 X_last_10_k_lines_close = np.array([k_lines_close])
 
-days = ["1", "3", "5", "7", "15"]
+days = ["1", "3", "5", "7", "15", "30", "45"]
 predictions = []
 for day in days:
     configuration = {

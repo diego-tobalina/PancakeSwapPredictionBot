@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 
-days = ["1", "3", "5", "7", "15"]
+days = ["1", "3", "5", "7", "15", "30", "45"]
 for day in days:
     configuration = {
         "data_input": {
@@ -14,9 +14,9 @@ for day in days:
         "model": {
             "max_depth": 20,
             "n_estimators": 500,
-            "save_file_name": "./model_" + days + "_day.joblib"
+            "save_file_name": "./model_" + day + "_day.joblib"
         },
-        "data_testing_percent": 0.85,
+        "data_testing_percent": 0.90,
     }
     # load the data
     x_input_file_name = configuration["data_input"]["X"]
@@ -46,4 +46,4 @@ for day in days:
 
     # test accuracy
     accuracy = accuracy_score(Y_pred, Y_test)
-    print("Accuracy: " + str(accuracy) + "%")
+    print("Accuracy with " + day + " days of data: " + str(accuracy * 100) + "%")

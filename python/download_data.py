@@ -1,13 +1,7 @@
 import numpy as np
 from binance.client import Client
 
-api = {
-    "key": "<placeholder>",
-    "secret": "<placeholder>",
-    "pair": "BNBUSDT",
-}
-
-days = ["1", "3", "5", "7", "15"]
+days = ["1", "3", "5", "7", "15", "30", "45"]
 for day in days:
     configuration = {
         "data_time": day + " day UTC",
@@ -17,15 +11,10 @@ for day in days:
             "Y": "./Y_" + day + "_day.csv"
         }
     }
-    # client for binance api
-    api_key = api["key"]
-    api_secret = api["secret"]
-    client = Client(api_key, api_secret)
 
     # connect to binance
     data_time = configuration["data_time"]
-    pair = api["pair"]
-    k_lines = client.get_historical_klines(pair, Client.KLINE_INTERVAL_1MINUTE, data_time)
+    k_lines = Client().get_historical_klines("BNBUSDT", Client.KLINE_INTERVAL_1MINUTE, data_time)
     k_lines_close = [kline[1] for kline in k_lines]
 
     # process the data
