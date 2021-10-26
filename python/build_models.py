@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 
-days = ["1", "3", "5", "7", "15", "30", "45"]
+days = ["1", "3", "5", "7", "15"]
 for day in days:
     configuration = {
         "data_input": {

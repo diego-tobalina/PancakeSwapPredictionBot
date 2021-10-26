@@ -1,7 +1,7 @@
 import numpy as np
 from binance.client import Client
 
-days = ["1", "3", "5", "7", "15", "30", "45"]
+days = ["1", "3", "5", "7", "15"]
 for day in days:
     configuration = {
         "data_time": day + " day UTC",

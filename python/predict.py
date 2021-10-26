@@ -17,7 +17,7 @@ k_lines = client.get_historical_klines(pair, Client.KLINE_INTERVAL_1MINUTE, data
 k_lines_close = [kline[1] for kline in k_lines]
 X_last_10_k_lines_close = np.array([k_lines_close])
 
-days = ["1", "3", "5", "7", "15", "30", "45"]
+days = ["1", "3", "5", "7", "15"]
 predictions = []
 for day in days:
     configuration = {
