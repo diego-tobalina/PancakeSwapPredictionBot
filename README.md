@@ -1,6 +1,6 @@
 # [🔥 UPDATE V2] PancakeSwapPredictionBot & Machine Learning
 
-## ❌ DO NOT USE THIS BOT, NEW VERSION: https://github.com/xBidi/PancakeSwapBot
+## ❌ DO NOT USE THIS BOT, IMPROVED NEW VERSION: https://github.com/xBidi/PancakeSwapBot
 
 This bot wins almost every 5 minute BNB-USD option on PancakeSwap Prediction.
 
