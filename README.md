@@ -1,6 +1,6 @@
 # [🔥 UPDATE V2] PancakeSwapPredictionBot & Machine Learning
 
-## ❌ DO NOT USE THIS BOT, IMPROVED NEW VERSION: https://github.com/xBidi/PancakeSwapBot
+## ❌ DO NOT USE THIS BOT, IMPROVED NEW VERSION: https://github.com/diego-tobalina/PancakeSwapBot
 
 ⚠️ Beware of forks. I do not give any guarantee that the fork may turn out to be a scam.
 
