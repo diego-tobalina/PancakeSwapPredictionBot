@@ -40,9 +40,7 @@ pip3 install sklearn
 brew install node
 npm i
 ```
-
 3. Run machine learning commands to build the models
-
 ```
 python3 python/download_data.py
 python3 python/build_models.py
